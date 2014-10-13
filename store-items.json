@@ -5,7 +5,9 @@
  * 
  * Authors: Stephanie Olson
  */
-
+ 
+ 
+// Speciality Pizza types
 [
   {
     "name": "Hawaiian",
