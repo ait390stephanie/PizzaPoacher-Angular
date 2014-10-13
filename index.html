@@ -1,0 +1,41 @@
+<!--
+ * Copyright 2014 -
+ * Licensed under the Academic Free License version 3.0
+ * http://opensource.org/licenses/AFL-3.0
+ * 
+ * Authors: Stephanie Olson
+ -->
+
+<!DOCTYPE html>
+<html ng-app="pizzaPoacher">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="items.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+  </head>
+
+  <body ng-controller="StoreController as store">
+    <!--  Header  -->
+    <header>
+      <h1 class="text-center">Welcome to Pizza Poacher</h1>
+      <h2 class="text-center">– Your One Stop Shop For Pizza! –</h2>
+    </header>
+
+    <!--  Item Container  -->
+    <div class="list-group">
+      <!--  Item Container  -->
+      <div class="list-group-item" ng-repeat="item in store.items">
+        <h3>{{item.name}} <em class="pull-right">{{item.price | currency}}</em></h3>
+
+        <!-- Image Gallery  -->
+        <item-gallery></item-gallery>
+
+        <!-- Item Tabs  -->
+        <item-tabs></item-tabs>
+      </div>
+
+    </div>
+  </body>
+</html>
